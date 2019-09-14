@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn test --watch
+  /usr/local/bin/node /usr/local/bin/yarn add serev
 
 PATH: 
   /Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Users/radwa/Library/Android/sdk/tools:/Users/radwa/Library/Android/sdk/platform-tools:/Users/radwa/Library/Android/sdk/emulator:/Users/radwa/Library/Android/sdk/tools/bin:/Users/radwa/Library/Android/sdk/tools:/Users/radwa/Library/Android/sdk/platform-tools:/Users/radwa/Library/Android/sdk/emulator:/Users/radwa/Library/Android/sdk/tools/bin
@@ -21,7 +21,8 @@ npm manifest:
     "license": "MIT",
     "scripts": {
       "serve": "live-server public/",
-      "build": "webpack",
+      "build:dev": "webpack",
+      "build:prod": "webpack -p --env production",
       "dev-server": "webpack-dev-server",
       "test": "jest --config=jest.config.json"
     },
@@ -36,6 +37,7 @@ npm manifest:
       "css-loader": "0.28.4",
       "enzyme": "3.0.0",
       "enzyme-adapter-react-16": "1.0.0",
+      "enzyme-to-json": "3.0.1",
       "jest": "20.0.4",
       "live-server": "^1.2.1",
       "moment": "2.18.1",
@@ -2108,6 +2110,12 @@ Lockfile:
       object.fromentries "^2.0.0"
       prop-types "^15.7.2"
       semver "^5.6.0"
+  
+  enzyme-to-json@3.0.1:
+    version "3.0.1"
+    resolved "https://registry.yarnpkg.com/enzyme-to-json/-/enzyme-to-json-3.0.1.tgz#16468e2ff3e4db817d84f9df38760abbc322273d"
+    dependencies:
+      lodash "^4.17.4"
   
   enzyme@3.0.0:
     version "3.0.0"
@@ -6640,16 +6648,14 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: Command failed.
-  Exit code: 1
-  Command: sh
-  Arguments: -c jest --config=jest.config.json --watch
-  Directory: /Users/radwa/Documents/study/expensify-app
-  Output:
-  
-      at ProcessTermError.MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
-      at new ProcessTermError (/usr/local/lib/node_modules/yarn/lib/cli.js:226:113)
-      at ChildProcess.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:30281:17)
-      at ChildProcess.emit (events.js:203:13)
-      at maybeClose (internal/child_process.js:1021:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)
+  Error: https://registry.yarnpkg.com/serev: Not found
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:65019:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:132430:22)
+      at Request.emit (events.js:203:13)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:133413:10)
+      at Request.emit (events.js:203:13)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:133333:12)
+      at Object.onceWrapper (events.js:291:20)
+      at IncomingMessage.emit (events.js:208:15)
+      at endReadableNT (_stream_readable.js:1168:12)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11)
