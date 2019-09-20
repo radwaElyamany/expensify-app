@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn run dev-server
+  /usr/local/bin/node /usr/local/bin/yarn run dev-serv
 
 PATH: 
   /Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Users/radwa/Library/Android/sdk/tools:/Users/radwa/Library/Android/sdk/platform-tools:/Users/radwa/Library/Android/sdk/emulator:/Users/radwa/Library/Android/sdk/tools/bin:/Users/radwa/Library/Android/sdk/tools:/Users/radwa/Library/Android/sdk/platform-tools:/Users/radwa/Library/Android/sdk/emulator:/Users/radwa/Library/Android/sdk/tools/bin
@@ -40,6 +40,7 @@ npm manifest:
       "express": "4.15.4",
       "extract-text-webpack-plugin": "3.0.0",
       "firebase": "4.2.0",
+      "history": "4.7.2",
       "moment": "2.18.1",
       "node-sass": "^4.12.0",
       "normalize.css": "^8.0.1",
@@ -2917,6 +2918,16 @@ Lockfile:
       inherits "^2.0.3"
       minimalistic-assert "^1.0.1"
   
+  history@4.7.2:
+    version "4.7.2"
+    resolved "https://registry.yarnpkg.com/history/-/history-4.7.2.tgz#22b5c7f31633c5b8021c7f4a8a954ac139ee8d5b"
+    dependencies:
+      invariant "^2.2.1"
+      loose-envify "^1.2.0"
+      resolve-pathname "^2.2.0"
+      value-equal "^0.4.0"
+      warning "^3.0.0"
+  
   history@^4.7.2:
     version "4.9.0"
     resolved "https://registry.yarnpkg.com/history/-/history-4.9.0.tgz#84587c2068039ead8af769e9d6a6860a14fa1bca"
@@ -3132,7 +3143,7 @@ Lockfile:
     version "1.2.0"
     resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.2.0.tgz#d5061a6224be58e8083985f5014d844359576296"
   
-  invariant@^2.0.0, invariant@^2.2.2, invariant@^2.2.4:
+  invariant@^2.0.0, invariant@^2.2.1, invariant@^2.2.2, invariant@^2.2.4:
     version "2.2.4"
     resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
     dependencies:
@@ -6782,16 +6793,14 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: Command failed.
-  Exit code: 1
-  Command: sh
-  Arguments: -c webpack-dev-server
-  Directory: /Users/radwa/Documents/study/expensify-app
-  Output:
-  
-      at ProcessTermError.MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
-      at new ProcessTermError (/usr/local/lib/node_modules/yarn/lib/cli.js:226:113)
-      at ChildProcess.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:30281:17)
-      at ChildProcess.emit (events.js:203:13)
-      at maybeClose (internal/child_process.js:1021:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)
+  Error: Command "dev-serv" not found.
+      at new MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:87307:17
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:98:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:116:14
+      at new Promise (<anonymous>)
+      at new F (/usr/local/lib/node_modules/yarn/lib/cli.js:23451:28)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:95:12
+      at runCommand (/usr/local/lib/node_modules/yarn/lib/cli.js:87312:22)
+      at Object.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:87412:14)
